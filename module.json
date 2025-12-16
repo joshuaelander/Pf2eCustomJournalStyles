@@ -13,7 +13,7 @@
     }
   ],
   "styles": [
-    "styles.css"
+    "styles/styles.css"
   ],
   "url": "https://github.com/joshuaelander/Pf2eCustomJournalStyles",
   "manifest": "https://raw.githubusercontent.com/joshuaelander/Pf2eCustomJournalStyles/main/module.json",
