@@ -1,0 +1,78 @@
+My Custom Journal Styles
+
+A lightweight Foundry VTT module that adds CSS themes for Journals.
+
+Installation
+
+Copy the Manifest URL: https://github.com/YOUR_USERNAME/my-journal-styles/releases/latest/download/module.json
+
+Open Foundry VTT > Add-on Modules > Install Module.
+
+Paste the URL into the bottom field and click Install.
+
+How to use
+
+In any Journal Entry, switch the editor to HTML/Source Code Mode (usually the < > button). Wrap your content in one of the corresponding div tags below.
+
+1. Classic Fantasy
+
+Best for: Standard D&D or Pathfinder (Kingmaker/Rise of the Runelords).
+
+<div class="theme-fantasy">
+    <h1>Chapter 1: The Village</h1>
+    <p>Text goes here...</p>
+</div>
+
+
+2. The Vaults (Dark Fantasy)
+
+Best for: Abomination Vaults, Underdark campaigns, Dungeons.
+Features: Dark background, light grey text, purple magical accents.
+
+<div class="theme-vaults">
+    <h1>Level 3: The Library</h1>
+    <blockquote>"The shadows here are thick enough to choke on."</blockquote>
+    <p>You enter a dark chamber...</p>
+</div>
+
+
+3. Magic Academy (Scholarly)
+
+Best for: Strength of Thousands, Wizard Colleges, Elven Cities.
+Features: Clean ivory background, gold accents, elegant headers.
+
+<div class="theme-academy">
+    <h1>Magical Theory 101</h1>
+    <p>Please open your textbooks...</p>
+</div>
+
+
+4. Gunsmoke (Steampunk/Western)
+
+Best for: Outlaws of Alkenstar, Eberron, Industrial settings.
+Features: Grungy paper, brass borders, typewriter fonts.
+
+<div class="theme-gunsmoke">
+    <h1>Wanted: Dead or Alive</h1>
+    <p>Reward: 5,000 gp</p>
+</div>
+
+
+5. Sci-Fi
+
+Best for: Starfinder, Cyberpunk, Mothership.
+
+<div class="theme-scifi">
+    <h1>Log Entry 044</h1>
+    <p>System Initialized...</p>
+</div>
+
+
+6. Horror
+
+Best for: Call of Cthulhu, Gothic Horror (Blood Lords).
+
+<div class="theme-horror">
+    <h1>The Last Will</h1>
+    <p>I leave everything to the cat...</p>
+</div>
