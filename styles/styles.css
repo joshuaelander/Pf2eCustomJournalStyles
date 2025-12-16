@@ -1,5 +1,5 @@
 /* =========================================
-   THEME 1: FANTASY / PARCHMENT
+   THEME 1: CLASSIC FANTASY / PARCHMENT
    Wrapper Class: <div class="theme-fantasy">
    ========================================= */
 
@@ -11,7 +11,7 @@
     
     font-family: 'Signika', 'Georgia', serif;
     color: var(--f-text);
-    background-color: var(--f-bg); /* Optional: Remove if using background image */
+    background-color: var(--f-bg);
     padding: 15px;
     border: 1px solid #dcd0a6;
     box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
@@ -41,7 +41,140 @@
 }
 
 /* =========================================
-   THEME 2: SCI-FI / DATAPAD
+   THEME 2: THE VAULTS (Dungeon / Dark Fantasy)
+   Inspired by: Abomination Vaults
+   Wrapper Class: <div class="theme-vaults">
+   ========================================= */
+
+.theme-vaults {
+    --v-bg: #1a1a1d;       /* Dark Stone */
+    --v-text: #c5c5c5;     /* Ash Grey */
+    --v-header: #9d4edd;   /* Void Purple */
+    --v-accent: #4a4e69;   /* Slate */
+
+    font-family: 'Signika', sans-serif;
+    background-color: var(--v-bg);
+    color: var(--v-text);
+    padding: 20px;
+    border: 3px double var(--v-accent);
+    box-shadow: inset 0 0 50px #000;
+}
+
+.theme-vaults h1 {
+    font-family: 'Modesto Condensed', serif;
+    color: var(--v-header);
+    text-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+    border-bottom: 1px solid var(--v-accent);
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.theme-vaults h2 {
+    color: #fff;
+    border-bottom: 1px solid var(--v-accent);
+    margin-top: 20px;
+}
+
+.theme-vaults blockquote {
+    background-color: #000;
+    border-left: 4px solid var(--v-header);
+    color: #fff;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+/* =========================================
+   THEME 3: MAGIC ACADEMY (Jungle / Scholar)
+   Inspired by: Strength of Thousands
+   Wrapper Class: <div class="theme-academy">
+   ========================================= */
+
+.theme-academy {
+    --a-bg: #fdfcf0;       /* Ivory */
+    --a-text: #2f3e46;     /* Dark Slate */
+    --a-primary: #2e8b57;  /* Sea Green */
+    --a-gold: #daa520;     /* Goldenrod */
+
+    font-family: 'Amiri', serif;
+    background-color: var(--a-bg);
+    color: var(--a-text);
+    padding: 20px;
+    border: 2px solid var(--a-primary);
+    border-radius: 10px 0 10px 0; /* Leaf shape corners */
+}
+
+.theme-academy h1 {
+    color: var(--a-primary);
+    text-align: center;
+    border-bottom: 1px solid var(--a-gold);
+    padding-bottom: 5px;
+}
+
+.theme-academy h1::before, .theme-academy h1::after {
+    content: " ✦ ";
+    color: var(--a-gold);
+}
+
+.theme-academy h2 {
+    color: var(--a-text);
+    background-color: rgba(46, 139, 87, 0.1); /* Light green tint */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.theme-academy table {
+    border: 1px solid var(--a-gold);
+}
+.theme-academy th {
+    background-color: var(--a-primary);
+    color: #fff;
+}
+
+/* =========================================
+   THEME 4: GUNSMOKE (Steampunk / Western)
+   Inspired by: Outlaws of Alkenstar
+   Wrapper Class: <div class="theme-gunsmoke">
+   ========================================= */
+
+.theme-gunsmoke {
+    --g-bg: #eaddcf;       /* Grungy Paper */
+    --g-text: #3e2723;     /* Dark Leather */
+    --g-brass: #b87333;    /* Copper/Brass */
+    --g-steel: #607d8b;    /* Blue Steel */
+
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    background-color: var(--g-bg);
+    color: var(--g-text);
+    padding: 20px;
+    border: 4px solid var(--g-brass);
+    outline: 2px dashed var(--g-text); /* Stitching effect */
+    outline-offset: -10px;
+}
+
+.theme-gunsmoke h1 {
+    font-family: 'Signika', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--g-text);
+    border-bottom: 4px solid var(--g-brass);
+    letter-spacing: -1px;
+}
+
+.theme-gunsmoke h2 {
+    color: var(--g-brass);
+    border-bottom: 1px dashed var(--g-text);
+}
+
+.theme-gunsmoke .read-aloud {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    transform: rotate(-0.5deg);
+}
+
+/* =========================================
+   THEME 5: SCI-FI / DATAPAD
    Wrapper Class: <div class="theme-scifi">
    ========================================= */
 
@@ -96,7 +229,7 @@
 }
 
 /* =========================================
-   THEME 3: HORROR / ELDRITCH
+   THEME 6: HORROR / ELDRITCH
    Wrapper Class: <div class="theme-horror">
    ========================================= */
 
