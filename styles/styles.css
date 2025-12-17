@@ -1,14 +1,18 @@
+/* ====================================================================
+   FIXED STYLES: All selectors now include .journal-sheet for high specificity.
+   ==================================================================== */
+
 /* =========================================
    THEME 1: CLASSIC FANTASY / PARCHMENT
    Wrapper Class: <div class="theme-fantasy">
    ========================================= */
 
-.theme-fantasy {
-    --f-primary: #5c0a0a;   /* Blood Red */
-    --f-accent: #d4a017;    /* Gold */
-    --f-text: #2b1d0e;      /* Dark Brown */
-    --f-bg: #f4e4bc;        /* Parchment */
-    
+.journal-sheet .theme-fantasy {
+    --f-primary: #5c0a0a; /* Blood Red */
+    --f-accent: #d4a017; /* Gold */
+    --f-text: #2b1d0e; /* Dark Brown */
+    --f-bg: #f4e4bc; /* Parchment */
+
     font-family: 'Signika', 'Georgia', serif;
     color: var(--f-text);
     background-color: var(--f-bg);
@@ -18,39 +22,38 @@
     border-radius: 2px;
 }
 
-.theme-fantasy h1 {
-    font-family: 'Modesto Condensed', serif;
-    color: var(--f-primary);
-    border-bottom: 2px double var(--f-accent);
-    text-transform: uppercase;
-    text-align: center;
-}
+    .journal-sheet .theme-fantasy h1 {
+        font-family: 'Modesto Condensed', serif;
+        color: var(--f-primary);
+        border-bottom: 2px double var(--f-accent);
+        text-transform: uppercase;
+        text-align: center;
+    }
 
-.theme-fantasy h2 {
-    color: var(--f-text);
-    border-left: 5px solid var(--f-primary);
-    padding-left: 10px;
-    background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
-}
+    .journal-sheet .theme-fantasy h2 {
+        color: var(--f-text);
+        border-left: 5px solid var(--f-primary);
+        padding-left: 10px;
+        background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
+    }
 
-.theme-fantasy blockquote {
-    font-style: italic;
-    border-left: 3px solid var(--f-accent);
-    background: rgba(255, 255, 255, 0.4);
-    padding: 5px 10px;
-}
+    .journal-sheet .theme-fantasy blockquote {
+        font-style: italic;
+        border-left: 3px solid var(--f-accent);
+        background: rgba(255, 255, 255, 0.4);
+        padding: 5px 10px;
+    }
 
 /* =========================================
    THEME 2: THE VAULTS (Dungeon / Dark Fantasy)
-   Inspired by: Abomination Vaults
    Wrapper Class: <div class="theme-vaults">
    ========================================= */
 
-.theme-vaults {
-    --v-bg: #1a1a1d;       /* Dark Stone */
-    --v-text: #c5c5c5;     /* Ash Grey */
-    --v-header: #9d4edd;   /* Void Purple */
-    --v-accent: #4a4e69;   /* Slate */
+.journal-sheet .theme-vaults {
+    --v-bg: #1a1a1d; /* Dark Stone */
+    --v-text: #c5c5c5; /* Ash Grey */
+    --v-header: #9d4edd; /* Void Purple */
+    --v-accent: #4a4e69; /* Slate */
 
     font-family: 'Signika', sans-serif;
     background-color: var(--v-bg);
@@ -60,130 +63,129 @@
     box-shadow: inset 0 0 50px #000;
 }
 
-.theme-vaults h1 {
-    font-family: 'Modesto Condensed', serif;
-    color: var(--v-header);
-    text-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
-    border-bottom: 1px solid var(--v-accent);
-    text-align: left;
-    letter-spacing: 2px;
-}
+    .journal-sheet .theme-vaults h1 {
+        font-family: 'Modesto Condensed', serif;
+        color: var(--v-header);
+        text-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+        border-bottom: 1px solid var(--v-accent);
+        text-align: left;
+        letter-spacing: 2px;
+    }
 
-.theme-vaults h2 {
-    color: #fff;
-    border-bottom: 1px solid var(--v-accent);
-    margin-top: 20px;
-}
+    .journal-sheet .theme-vaults h2 {
+        color: #fff;
+        border-bottom: 1px solid var(--v-accent);
+        margin-top: 20px;
+    }
 
-.theme-vaults blockquote {
-    background-color: #000;
-    border-left: 4px solid var(--v-header);
-    color: #fff;
-    padding: 10px;
-    font-family: 'Courier New', monospace;
-}
+    .journal-sheet .theme-vaults blockquote {
+        background-color: #000;
+        border-left: 4px solid var(--v-header);
+        color: #fff;
+        padding: 10px;
+        font-family: 'Courier New', monospace;
+    }
 
 /* =========================================
    THEME 3: MAGIC ACADEMY (Jungle / Scholar)
-   Inspired by: Strength of Thousands
    Wrapper Class: <div class="theme-academy">
    ========================================= */
 
-.theme-academy {
-    --a-bg: #fdfcf0;       /* Ivory */
-    --a-text: #2f3e46;     /* Dark Slate */
-    --a-primary: #2e8b57;  /* Sea Green */
-    --a-gold: #daa520;     /* Goldenrod */
+.journal-sheet .theme-academy {
+    --a-bg: #fdfcf0; /* Ivory */
+    --a-text: #2f3e46; /* Dark Slate */
+    --a-primary: #2e8b57; /* Sea Green */
+    --a-gold: #daa520; /* Goldenrod */
 
     font-family: 'Amiri', serif;
     background-color: var(--a-bg);
     color: var(--a-text);
     padding: 20px;
     border: 2px solid var(--a-primary);
-    border-radius: 10px 0 10px 0; /* Leaf shape corners */
+    border-radius: 10px 0 10px 0;
 }
 
-.theme-academy h1 {
-    color: var(--a-primary);
-    text-align: center;
-    border-bottom: 1px solid var(--a-gold);
-    padding-bottom: 5px;
-}
+    .journal-sheet .theme-academy h1 {
+        color: var(--a-primary);
+        text-align: center;
+        border-bottom: 1px solid var(--a-gold);
+        padding-bottom: 5px;
+    }
 
-.theme-academy h1::before, .theme-academy h1::after {
-    content: " ✦ ";
-    color: var(--a-gold);
-}
+        .journal-sheet .theme-academy h1::before, .theme-sheet .theme-academy h1::after {
+            content: " ✦ ";
+            color: var(--a-gold);
+        }
 
-.theme-academy h2 {
-    color: var(--a-text);
-    background-color: rgba(46, 139, 87, 0.1); /* Light green tint */
-    padding: 5px 10px;
-    border-radius: 5px;
-}
+    .journal-sheet .theme-academy h2 {
+        color: var(--a-text);
+        background-color: rgba(46, 139, 87, 0.1);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 
-.theme-academy table {
-    border: 1px solid var(--a-gold);
-}
-.theme-academy th {
-    background-color: var(--a-primary);
-    color: #fff;
-}
+    .journal-sheet .theme-academy table {
+        border: 1px solid var(--a-gold);
+    }
+
+    .journal-sheet .theme-academy th {
+        background-color: var(--a-primary);
+        color: #fff;
+    }
 
 /* =========================================
    THEME 4: GUNSMOKE (Steampunk / Western)
-   Inspired by: Outlaws of Alkenstar
    Wrapper Class: <div class="theme-gunsmoke">
    ========================================= */
 
-.theme-gunsmoke {
-    --g-bg: #eaddcf;       /* Grungy Paper */
-    --g-text: #3e2723;     /* Dark Leather */
-    --g-brass: #b87333;    /* Copper/Brass */
-    --g-steel: #607d8b;    /* Blue Steel */
+.journal-sheet .theme-gunsmoke {
+    --g-bg: #eaddcf; /* Grungy Paper */
+    --g-text: #3e2723; /* Dark Leather */
+    --g-brass: #b87333; /* Copper/Brass */
+    --g-steel: #607d8b; /* Blue Steel */
 
     font-family: 'Courier Prime', 'Courier New', monospace;
     background-color: var(--g-bg);
     color: var(--g-text);
     padding: 20px;
     border: 4px solid var(--g-brass);
-    outline: 2px dashed var(--g-text); /* Stitching effect */
+    outline: 2px dashed var(--g-text);
     outline-offset: -10px;
 }
 
-.theme-gunsmoke h1 {
-    font-family: 'Signika', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--g-text);
-    border-bottom: 4px solid var(--g-brass);
-    letter-spacing: -1px;
-}
+    .journal-sheet .theme-gunsmoke h1 {
+        font-family: 'Signika', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--g-text);
+        border-bottom: 4px solid var(--g-brass);
+        letter-spacing: -1px;
+    }
 
-.theme-gunsmoke h2 {
-    color: var(--g-brass);
-    border-bottom: 1px dashed var(--g-text);
-}
+    .journal-sheet .theme-gunsmoke h2 {
+        color: var(--g-brass);
+        border-bottom: 1px dashed var(--g-text);
+    }
 
-.theme-gunsmoke .read-aloud {
-    background-color: #fff;
-    border: 1px solid #000;
-    padding: 10px;
-    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-    transform: rotate(-0.5deg);
-}
+    .journal-sheet .theme-gunsmoke .read-aloud {
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 10px;
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        transform: rotate(-0.5deg);
+    }
 
 /* =========================================
    THEME 5: SCI-FI / DATAPAD
    Wrapper Class: <div class="theme-scifi">
    ========================================= */
 
-.theme-scifi {
-    --s-glow: #00ffea;      /* Cyan Glow */
-    --s-bg: #0b0f19;        /* Deep Space Blue/Black */
-    --s-text: #a8dadd;      /* Pale Cyan */
-    --s-dim: #1e293b;       /* Panel Color */
-    
+.journal-sheet .theme-scifi {
+    --s-glow: #00ffea; /* Cyan Glow */
+    --s-bg: #0b0f19; /* Deep Space Blue/Black */
+    --s-text: #a8dadd; /* Pale Cyan */
+    --s-dim: #1e293b; /* Panel Color */
+
     font-family: 'Roboto', 'Courier New', monospace;
     background-color: var(--s-bg);
     color: var(--s-text);
@@ -192,52 +194,53 @@
     box-shadow: 0 0 10px rgba(0, 255, 234, 0.2);
 }
 
-.theme-scifi h1 {
-    color: var(--s-glow);
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    border-bottom: 1px solid var(--s-glow);
-    text-shadow: 0 0 5px var(--s-glow);
-}
+    .journal-sheet .theme-scifi h1 {
+        color: var(--s-glow);
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        border-bottom: 1px solid var(--s-glow);
+        text-shadow: 0 0 5px var(--s-glow);
+    }
 
-.theme-scifi h2 {
-    background-color: var(--s-dim);
-    color: #fff;
-    padding: 5px 10px;
-    border-left: 5px solid var(--s-glow);
-}
+    .journal-sheet .theme-scifi h2 {
+        background-color: var(--s-dim);
+        color: #fff;
+        padding: 5px 10px;
+        border-left: 5px solid var(--s-glow);
+    }
 
-.theme-scifi .read-aloud {
-    border: 1px dashed var(--s-glow);
-    background-color: rgba(0, 255, 234, 0.05);
-    padding: 10px;
-    font-family: 'Courier New', monospace;
-}
+    .journal-sheet .theme-scifi .read-aloud {
+        border: 1px dashed var(--s-glow);
+        background-color: rgba(0, 255, 234, 0.05);
+        padding: 10px;
+        font-family: 'Courier New', monospace;
+    }
 
-.theme-scifi table {
-    width: 100%;
-    border: 1px solid var(--s-dim);
-}
-.theme-scifi th {
-    background-color: var(--s-glow);
-    color: var(--s-bg);
-    text-transform: uppercase;
-}
-.theme-scifi td {
-    border-bottom: 1px solid var(--s-dim);
-}
+    .journal-sheet .theme-scifi table {
+        width: 100%;
+        border: 1px solid var(--s-dim);
+    }
+
+    .journal-sheet .theme-scifi th {
+        background-color: var(--s-glow);
+        color: var(--s-bg);
+        text-transform: uppercase;
+    }
+
+    .journal-sheet .theme-scifi td {
+        border-bottom: 1px solid var(--s-dim);
+    }
 
 /* =========================================
    THEME 6: HORROR / ELDRITCH
    Wrapper Class: <div class="theme-horror">
    ========================================= */
 
-.theme-horror {
+.journal-sheet .theme-horror {
     --h-blood: #8a0303;
     --h-text: #1a1a1a;
     --h-paper: #d1cfcd;
-    
     font-family: 'Amiri', 'Times New Roman', serif;
     background-color: var(--h-paper);
     color: var(--h-text);
@@ -245,28 +248,28 @@
     background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(0,0,0,0.1) 30px);
 }
 
-.theme-horror h1 {
-    font-family: 'Amiri', serif;
-    font-size: 3em;
-    color: var(--h-text);
-    text-align: center;
-    border-bottom: none;
-    letter-spacing: -1px;
-}
+    .journal-sheet .theme-horror h1 {
+        font-family: 'Amiri', serif;
+        font-size: 3em;
+        color: var(--h-text);
+        text-align: center;
+        border-bottom: none;
+        letter-spacing: -1px;
+    }
 
-.theme-horror h2 {
-    color: var(--h-blood);
-    font-style: italic;
-    border-bottom: 1px solid #000;
-}
+    .journal-sheet .theme-horror h2 {
+        color: var(--h-blood);
+        font-style: italic;
+        border-bottom: 1px solid #000;
+    }
 
-.theme-horror strong {
-    color: var(--h-blood);
-}
+    .journal-sheet .theme-horror strong {
+        color: var(--h-blood);
+    }
 
-.theme-horror img {
-    filter: sepia(0.8) contrast(1.2);
-    border: 5px solid #fff;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-    transform: rotate(-1deg);
-}
+    .journal-sheet .theme-horror img {
+        filter: sepia(0.8) contrast(1.2);
+        border: 5px solid #fff;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        transform: rotate(-1deg);
+    }
