@@ -273,3 +273,203 @@
         box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
         transform: rotate(-1deg);
     }
+
+/* =========================================
+   THEME 7: THASSILON / RUNELORDS
+   Wrapper Class: <div class="theme-thassilon">
+   ========================================= */
+
+.journal-sheet .theme-thassilon {
+    --t-bg: #2b2b2b; /* Charcoal Stone */
+    --t-text: #e0e0e0; /* Light Grey */
+    --t-sin: #b30000; /* Sin Red */
+    --t-rune: #5a5a5a; /* Dark Stone */
+
+    font-family: 'Modesto Condensed', serif;
+    background-color: var(--t-bg);
+    color: var(--t-text);
+    padding: 25px;
+    border: 5px solid var(--t-rune);
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+    /* Seven-pointed star watermark effect */
+    .journal-sheet .theme-thassilon::before {
+        content: "★";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 5em;
+        color: rgba(255,255,255,0.05);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .journal-sheet .theme-thassilon h1 {
+        font-family: 'Modesto Condensed', serif;
+        font-size: 3em;
+        color: var(--t-sin);
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: 1px solid var(--t-sin);
+        border-top: 1px solid var(--t-sin);
+        padding: 10px 0;
+        letter-spacing: 5px;
+    }
+
+    .journal-sheet .theme-thassilon h2 {
+        color: #fff;
+        border-left: 5px solid var(--t-sin);
+        padding-left: 15px;
+        background: linear-gradient(90deg, rgba(179,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    .journal-sheet .theme-thassilon .read-aloud {
+        border: 1px solid var(--t-rune);
+        background-color: #1f1f1f;
+        padding: 15px;
+        font-style: italic;
+        border-left: 5px solid var(--t-text);
+    }
+
+/* =========================================
+   THEME 8: KNIGHTS OF LASTWALL
+   Wrapper Class: <div class="theme-lastwall">
+   ========================================= */
+
+.journal-sheet .theme-lastwall {
+    --l-bg: #f8f9fa; /* Pure White/Grey */
+    --l-text: #2c3e50; /* Navy Text */
+    --l-silver: #bdc3c7; /* Armor Silver */
+    --l-crimson: #c0392b; /* Iomedae Red */
+
+    font-family: 'Signika', sans-serif;
+    background-color: var(--l-bg);
+    color: var(--l-text);
+    padding: 20px;
+    border: 1px solid var(--l-silver);
+    border-left: 10px solid var(--l-silver);
+    border-right: 10px solid var(--l-silver);
+}
+
+    .journal-sheet .theme-lastwall h1 {
+        font-family: 'Modesto Condensed', serif;
+        color: var(--l-text);
+        text-align: center;
+        border-bottom: 3px solid var(--l-crimson);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .journal-sheet .theme-lastwall h2 {
+        color: var(--l-crimson);
+        border-bottom: 1px solid var(--l-silver);
+        margin-top: 25px;
+        font-variant: small-caps;
+    }
+
+    .journal-sheet .theme-lastwall blockquote {
+        background-color: #fff;
+        border: 1px solid var(--l-silver);
+        border-left: 5px solid var(--l-crimson);
+        padding: 10px 20px;
+        color: #555;
+    }
+
+/* =========================================
+   THEME 9: ELVEN / KYONIN
+   Wrapper Class: <div class="theme-elven">
+   ========================================= */
+
+.journal-sheet .theme-elven {
+    --e-bg: #f0f7f4; /* Mint White */
+    --e-text: #081c15; /* Deep Forest */
+    --e-accent: #52b788; /* Light Green */
+    --e-highlight: #d8f3dc; /* Pale Green */
+
+    font-family: 'Amiri', serif;
+    background-color: var(--e-bg);
+    color: var(--e-text);
+    padding: 30px;
+    border: 1px solid var(--e-accent);
+    border-radius: 30px 0 30px 0;
+    box-shadow: 5px 5px 0px var(--e-highlight);
+}
+
+    .journal-sheet .theme-elven h1 {
+        font-family: 'Amiri', serif;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--e-text);
+        text-align: center;
+        border-bottom: 1px solid var(--e-accent);
+    }
+
+    .journal-sheet .theme-elven h2 {
+        color: var(--e-accent);
+        text-transform: lowercase;
+        font-variant: small-caps;
+        font-size: 1.8em;
+        border-bottom: none;
+    }
+
+    .journal-sheet .theme-elven p::first-letter {
+        color: var(--e-accent);
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+/* =========================================
+   THEME 10: ABSALOM / CITY OF GOLD
+   Wrapper Class: <div class="theme-absalom">
+   ========================================= */
+
+.journal-sheet .theme-absalom {
+    --ab-bg: #fffbf0; /* Cream */
+    --ab-text: #1a1a1a; /* Black */
+    --ab-gold: #d4af37; /* Metallic Gold */
+    --ab-blue: #003366; /* Taldan Blue */
+
+    font-family: 'Signika', 'Georgia', serif;
+    background-color: var(--ab-bg);
+    color: var(--ab-text);
+    padding: 20px;
+    border: 4px double var(--ab-gold);
+    outline: 1px solid var(--ab-blue);
+    outline-offset: 5px;
+    margin: 10px;
+}
+
+    .journal-sheet .theme-absalom h1 {
+        font-family: 'Modesto Condensed', serif;
+        color: var(--ab-blue);
+        text-align: center;
+        border-top: 2px solid var(--ab-gold);
+        border-bottom: 2px solid var(--ab-gold);
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+
+    .journal-sheet .theme-absalom h2 {
+        color: var(--ab-gold);
+        text-shadow: 1px 1px 0px #000;
+        background-color: var(--ab-blue);
+        padding: 5px 10px;
+        border-radius: 2px;
+    }
+
+    .journal-sheet .theme-absalom table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .journal-sheet .theme-absalom th {
+        background-color: var(--ab-gold);
+        color: #fff;
+        border: 1px solid #b3932d;
+    }
+
+    .journal-sheet .theme-absalom td {
+        border: 1px solid var(--ab-gold);
+    }
