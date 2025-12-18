@@ -58,46 +58,42 @@
    THEME 2: THE VAULTS (Dungeon / Dark Fantasy)
    Wrapper Class: <div class="theme-vaults">
    ========================================= */
+
 .journal-sheet .theme-vaults {
-    --v-bg: #151515; /* Void Black */
-    --v-text: #d0d0d0; /* Ash Grey */
+    --v-bg: #1a1a1d; /* Dark Stone */
+    --v-text: #c5c5c5; /* Ash Grey */
     --v-header: #9d4edd; /* Void Purple */
-    --v-accent: #333; /* Dark Slate */
+    --v-accent: #4a4e69; /* Slate */
 
     font-family: 'Signika', sans-serif;
     background-color: var(--v-bg);
     color: var(--v-text);
-    padding: 30px;
-    border: 5px double #444;
-    box-shadow: inset 0 0 80px #000;
+    padding: 20px;
+    border: 3px double var(--v-accent);
+    box-shadow: inset 0 0 50px #000;
 }
 
     .journal-sheet .theme-vaults h1 {
         font-family: 'Modesto Condensed', serif;
-        font-size: 3em;
         color: var(--v-header);
-        text-shadow: 0 0 15px rgba(157, 78, 221, 0.6);
-        border-bottom: 1px solid #444;
+        text-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+        border-bottom: 1px solid var(--v-accent);
         text-align: left;
-        letter-spacing: 3px;
-        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     .journal-sheet .theme-vaults h2 {
         color: #fff;
-        border-left: 5px solid var(--v-header);
-        padding-left: 15px;
-        background: linear-gradient(90deg, rgba(157, 78, 221, 0.2) 0%, rgba(0,0,0,0) 100%);
+        border-bottom: 1px solid var(--v-accent);
         margin-top: 20px;
     }
 
     .journal-sheet .theme-vaults blockquote {
-        background-color: #0a0a0a;
-        border: 1px solid #444;
-        color: #a8a8a8;
-        padding: 15px;
+        background-color: #000;
+        border-left: 4px solid var(--v-header);
+        color: #fff;
+        padding: 10px;
         font-family: 'Courier New', monospace;
-        border-left: 2px solid var(--v-header);
     }
 
 /* =========================================
@@ -160,46 +156,49 @@
    THEME 4: GUNSMOKE (Steampunk / Western)
    Wrapper Class: <div class="theme-gunsmoke">
    ========================================= */
+
 .journal-sheet .theme-gunsmoke {
-    --g-bg: #e3dcd2; /* Dirty Paper */
-    --g-text: #2c1e1a; /* Old Ink */
+    --g-bg: #eaddcf; /* Grungy Paper */
+    --g-text: #3e2723; /* Dark Leather */
     --g-brass: #b87333; /* Copper/Brass */
+    --g-steel: #607d8b; /* Blue Steel */
 
     font-family: 'Courier Prime', 'Courier New', monospace;
     background-color: var(--g-bg);
-    /* Grungy texture noise */
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.02) 10px, rgba(0,0,0,0.02) 20px);
     color: var(--g-text);
-    padding: 25px;
+    padding: 20px;
     border: 4px solid var(--g-brass);
-    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
-    transform: rotate(-0.5deg); /* Slight tilt for realism */
-    width: 98%; /* Prevent scrollbar from tilt */
-    margin: 0 auto;
+    outline: 2px dashed var(--g-text);
+    outline-offset: -10px;
 }
 
     .journal-sheet .theme-gunsmoke h1 {
         font-family: 'Signika', sans-serif;
-        font-weight: 900;
+        font-weight: 800;
         text-transform: uppercase;
-        color: #000;
+        color: var(--g-text);
         border-bottom: 4px solid var(--g-brass);
-        border-top: 4px solid var(--g-brass);
-        text-align: center;
-        letter-spacing: 1px;
-        background-color: rgba(184, 115, 51, 0.1);
+        letter-spacing: -1px;
     }
 
     .journal-sheet .theme-gunsmoke h2 {
         color: var(--g-brass);
-        border-bottom: 2px dashed var(--g-text);
-        text-transform: uppercase;
+        border-bottom: 1px dashed var(--g-text);
+    }
+
+    .journal-sheet .theme-gunsmoke .read-aloud {
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 10px;
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        transform: rotate(-0.5deg);
     }
 
 /* =========================================
    THEME 5: SCI-FI / DATAPAD
    Wrapper Class: <div class="theme-scifi">
    ========================================= */
+
 .journal-sheet .theme-scifi {
     --s-glow: #00ffea; /* Cyan Glow */
     --s-bg: #0b0f19; /* Deep Space Blue/Black */
@@ -211,66 +210,87 @@
     color: var(--s-text);
     padding: 20px;
     border: 1px solid var(--s-glow);
-    box-shadow: 0 0 15px rgba(0, 255, 234, 0.15);
-    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 234, 0.2);
 }
 
     .journal-sheet .theme-scifi h1 {
         color: var(--s-glow);
         font-weight: 300;
         text-transform: uppercase;
-        letter-spacing: 6px;
+        letter-spacing: 4px;
         border-bottom: 1px solid var(--s-glow);
-        text-shadow: 0 0 8px var(--s-glow);
-        margin-bottom: 20px;
+        text-shadow: 0 0 5px var(--s-glow);
     }
 
     .journal-sheet .theme-scifi h2 {
-        background: linear-gradient(90deg, var(--s-dim) 0%, transparent 100%);
+        background-color: var(--s-dim);
         color: #fff;
         padding: 5px 10px;
-        border-left: 4px solid var(--s-glow);
+        border-left: 5px solid var(--s-glow);
     }
 
     .journal-sheet .theme-scifi .read-aloud {
         border: 1px dashed var(--s-glow);
         background-color: rgba(0, 255, 234, 0.05);
-        padding: 15px;
+        padding: 10px;
         font-family: 'Courier New', monospace;
-        margin: 15px 0;
+    }
+
+    .journal-sheet .theme-scifi table {
+        width: 100%;
+        border: 1px solid var(--s-dim);
+    }
+
+    .journal-sheet .theme-scifi th {
+        background-color: var(--s-glow);
+        color: var(--s-bg);
+        text-transform: uppercase;
+    }
+
+    .journal-sheet .theme-scifi td {
+        border-bottom: 1px solid var(--s-dim);
     }
 
 /* =========================================
    THEME 6: HORROR / ELDRITCH
    Wrapper Class: <div class="theme-horror">
    ========================================= */
+
 .journal-sheet .theme-horror {
     --h-blood: #8a0303;
-    --h-text: #000;
-    --h-paper: #dcdcdc;
+    --h-text: #1a1a1a;
+    --h-paper: #d1cfcd;
     font-family: 'Amiri', 'Times New Roman', serif;
     background-color: var(--h-paper);
     color: var(--h-text);
-    padding: 30px;
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
-    filter: contrast(1.1) sepia(0.3);
+    padding: 20px;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(0,0,0,0.1) 30px);
 }
 
     .journal-sheet .theme-horror h1 {
         font-family: 'Amiri', serif;
-        font-size: 3.5em;
+        font-size: 3em;
         color: var(--h-text);
         text-align: center;
         border-bottom: none;
-        letter-spacing: -2px;
-        transform: rotate(1deg); /* Unsettling tilt */
+        letter-spacing: -1px;
     }
 
     .journal-sheet .theme-horror h2 {
         color: var(--h-blood);
         font-style: italic;
-        border-bottom: 2px solid #000;
-        padding-bottom: 5px;
+        border-bottom: 1px solid #000;
+    }
+
+    .journal-sheet .theme-horror strong {
+        color: var(--h-blood);
+    }
+
+    .journal-sheet .theme-horror img {
+        filter: sepia(0.8) contrast(1.2);
+        border: 5px solid #fff;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        transform: rotate(-1deg);
     }
 
 /* =========================================
