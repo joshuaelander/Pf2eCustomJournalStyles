@@ -1,12 +1,11 @@
 /* ====================================================================
-   FIXED STYLES: All selectors now include .journal-sheet for high specificity.
+   FIXED STYLES: All selectors include .journal-sheet for high specificity.
    ==================================================================== */
 
 /* =========================================
    THEME 1: CLASSIC FANTASY / PARCHMENT
    Wrapper Class: <div class="theme-fantasy">
    ========================================= */
-
 .journal-sheet .theme-fantasy {
     --f-primary: #5c0a0a; /* Blood Red */
     --f-accent: #d4a017; /* Gold */
@@ -16,170 +15,191 @@
     font-family: 'Signika', 'Georgia', serif;
     color: var(--f-text);
     background-color: var(--f-bg);
-    padding: 15px;
+    /* Subtle paper texture using noise/gradient */
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.05), rgba(0,0,0,0));
+    padding: 25px;
     border: 1px solid #dcd0a6;
-    box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2), inset 0 0 60px rgba(165, 142, 100, 0.3);
     border-radius: 2px;
+    position: relative;
 }
 
     .journal-sheet .theme-fantasy h1 {
         font-family: 'Modesto Condensed', serif;
+        font-size: 2.5em;
         color: var(--f-primary);
-        border-bottom: 2px double var(--f-accent);
+        border-bottom: 2px solid var(--f-primary);
+        border-top: 1px solid var(--f-primary);
+        padding: 5px 0;
         text-transform: uppercase;
         text-align: center;
+        letter-spacing: 1px;
     }
 
     .journal-sheet .theme-fantasy h2 {
+        font-family: 'Modesto Condensed', serif;
+        font-size: 1.8em;
         color: var(--f-text);
-        border-left: 5px solid var(--f-primary);
-        padding-left: 10px;
-        background: linear-gradient(90deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
+        border-bottom: 1px solid var(--f-accent);
+        margin-top: 20px;
     }
 
     .journal-sheet .theme-fantasy blockquote {
+        font-family: 'Signika', sans-serif;
         font-style: italic;
-        border-left: 3px solid var(--f-accent);
-        background: rgba(255, 255, 255, 0.4);
-        padding: 5px 10px;
+        border-left: 4px solid var(--f-primary);
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px 15px;
+        margin: 15px 0;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
 
 /* =========================================
    THEME 2: THE VAULTS (Dungeon / Dark Fantasy)
    Wrapper Class: <div class="theme-vaults">
    ========================================= */
-
 .journal-sheet .theme-vaults {
-    --v-bg: #1a1a1d; /* Dark Stone */
-    --v-text: #c5c5c5; /* Ash Grey */
+    --v-bg: #151515; /* Void Black */
+    --v-text: #d0d0d0; /* Ash Grey */
     --v-header: #9d4edd; /* Void Purple */
-    --v-accent: #4a4e69; /* Slate */
+    --v-accent: #333; /* Dark Slate */
 
     font-family: 'Signika', sans-serif;
     background-color: var(--v-bg);
     color: var(--v-text);
-    padding: 20px;
-    border: 3px double var(--v-accent);
-    box-shadow: inset 0 0 50px #000;
+    padding: 30px;
+    border: 5px double #444;
+    box-shadow: inset 0 0 80px #000;
 }
 
     .journal-sheet .theme-vaults h1 {
         font-family: 'Modesto Condensed', serif;
+        font-size: 3em;
         color: var(--v-header);
-        text-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
-        border-bottom: 1px solid var(--v-accent);
+        text-shadow: 0 0 15px rgba(157, 78, 221, 0.6);
+        border-bottom: 1px solid #444;
         text-align: left;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
     }
 
     .journal-sheet .theme-vaults h2 {
         color: #fff;
-        border-bottom: 1px solid var(--v-accent);
+        border-left: 5px solid var(--v-header);
+        padding-left: 15px;
+        background: linear-gradient(90deg, rgba(157, 78, 221, 0.2) 0%, rgba(0,0,0,0) 100%);
         margin-top: 20px;
     }
 
     .journal-sheet .theme-vaults blockquote {
-        background-color: #000;
-        border-left: 4px solid var(--v-header);
-        color: #fff;
-        padding: 10px;
+        background-color: #0a0a0a;
+        border: 1px solid #444;
+        color: #a8a8a8;
+        padding: 15px;
         font-family: 'Courier New', monospace;
+        border-left: 2px solid var(--v-header);
     }
 
 /* =========================================
    THEME 3: MAGIC ACADEMY (Jungle / Scholar)
    Wrapper Class: <div class="theme-academy">
    ========================================= */
-
 .journal-sheet .theme-academy {
-    --a-bg: #fdfcf0; /* Ivory */
+    --a-bg: #fffbf2; /* Creamy Ivory */
     --a-text: #2f3e46; /* Dark Slate */
     --a-primary: #2e8b57; /* Sea Green */
     --a-gold: #daa520; /* Goldenrod */
 
-    font-family: 'Amiri', serif;
+    font-family: 'Amiri', serif; /* More academic serif */
     background-color: var(--a-bg);
     color: var(--a-text);
-    padding: 20px;
-    border: 2px solid var(--a-primary);
-    border-radius: 10px 0 10px 0;
+    padding: 40px;
+    border: 1px solid var(--a-gold);
+    outline: 6px solid var(--a-primary);
+    outline-offset: -10px;
+    position: relative;
 }
+
+    /* Corner decorations */
+    .journal-sheet .theme-academy::before {
+        content: "✦";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: var(--a-gold);
+        font-size: 20px;
+    }
+
+    .journal-sheet .theme-academy::after {
+        content: "✦";
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        color: var(--a-gold);
+        font-size: 20px;
+    }
 
     .journal-sheet .theme-academy h1 {
         color: var(--a-primary);
         text-align: center;
-        border-bottom: 1px solid var(--a-gold);
-        padding-bottom: 5px;
+        border-bottom: 2px solid var(--a-gold);
+        padding-bottom: 10px;
+        font-variant: small-caps;
+        letter-spacing: 2px;
     }
-
-        .journal-sheet .theme-academy h1::before, .theme-sheet .theme-academy h1::after {
-            content: " ✦ ";
-            color: var(--a-gold);
-        }
 
     .journal-sheet .theme-academy h2 {
         color: var(--a-text);
         background-color: rgba(46, 139, 87, 0.1);
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-
-    .journal-sheet .theme-academy table {
-        border: 1px solid var(--a-gold);
-    }
-
-    .journal-sheet .theme-academy th {
-        background-color: var(--a-primary);
-        color: #fff;
+        padding: 5px 15px;
+        border-radius: 15px 0 15px 0;
+        border-left: 3px solid var(--a-gold);
     }
 
 /* =========================================
    THEME 4: GUNSMOKE (Steampunk / Western)
    Wrapper Class: <div class="theme-gunsmoke">
    ========================================= */
-
 .journal-sheet .theme-gunsmoke {
-    --g-bg: #eaddcf; /* Grungy Paper */
-    --g-text: #3e2723; /* Dark Leather */
+    --g-bg: #e3dcd2; /* Dirty Paper */
+    --g-text: #2c1e1a; /* Old Ink */
     --g-brass: #b87333; /* Copper/Brass */
-    --g-steel: #607d8b; /* Blue Steel */
 
     font-family: 'Courier Prime', 'Courier New', monospace;
     background-color: var(--g-bg);
+    /* Grungy texture noise */
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.02) 10px, rgba(0,0,0,0.02) 20px);
     color: var(--g-text);
-    padding: 20px;
+    padding: 25px;
     border: 4px solid var(--g-brass);
-    outline: 2px dashed var(--g-text);
-    outline-offset: -10px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+    transform: rotate(-0.5deg); /* Slight tilt for realism */
+    width: 98%; /* Prevent scrollbar from tilt */
+    margin: 0 auto;
 }
 
     .journal-sheet .theme-gunsmoke h1 {
         font-family: 'Signika', sans-serif;
-        font-weight: 800;
+        font-weight: 900;
         text-transform: uppercase;
-        color: var(--g-text);
+        color: #000;
         border-bottom: 4px solid var(--g-brass);
-        letter-spacing: -1px;
+        border-top: 4px solid var(--g-brass);
+        text-align: center;
+        letter-spacing: 1px;
+        background-color: rgba(184, 115, 51, 0.1);
     }
 
     .journal-sheet .theme-gunsmoke h2 {
         color: var(--g-brass);
-        border-bottom: 1px dashed var(--g-text);
-    }
-
-    .journal-sheet .theme-gunsmoke .read-aloud {
-        background-color: #fff;
-        border: 1px solid #000;
-        padding: 10px;
-        box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-        transform: rotate(-0.5deg);
+        border-bottom: 2px dashed var(--g-text);
+        text-transform: uppercase;
     }
 
 /* =========================================
    THEME 5: SCI-FI / DATAPAD
    Wrapper Class: <div class="theme-scifi">
    ========================================= */
-
 .journal-sheet .theme-scifi {
     --s-glow: #00ffea; /* Cyan Glow */
     --s-bg: #0b0f19; /* Deep Space Blue/Black */
@@ -191,285 +211,284 @@
     color: var(--s-text);
     padding: 20px;
     border: 1px solid var(--s-glow);
-    box-shadow: 0 0 10px rgba(0, 255, 234, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 234, 0.15);
+    border-radius: 5px;
 }
 
     .journal-sheet .theme-scifi h1 {
         color: var(--s-glow);
         font-weight: 300;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        letter-spacing: 6px;
         border-bottom: 1px solid var(--s-glow);
-        text-shadow: 0 0 5px var(--s-glow);
+        text-shadow: 0 0 8px var(--s-glow);
+        margin-bottom: 20px;
     }
 
     .journal-sheet .theme-scifi h2 {
-        background-color: var(--s-dim);
+        background: linear-gradient(90deg, var(--s-dim) 0%, transparent 100%);
         color: #fff;
         padding: 5px 10px;
-        border-left: 5px solid var(--s-glow);
+        border-left: 4px solid var(--s-glow);
     }
 
     .journal-sheet .theme-scifi .read-aloud {
         border: 1px dashed var(--s-glow);
         background-color: rgba(0, 255, 234, 0.05);
-        padding: 10px;
+        padding: 15px;
         font-family: 'Courier New', monospace;
-    }
-
-    .journal-sheet .theme-scifi table {
-        width: 100%;
-        border: 1px solid var(--s-dim);
-    }
-
-    .journal-sheet .theme-scifi th {
-        background-color: var(--s-glow);
-        color: var(--s-bg);
-        text-transform: uppercase;
-    }
-
-    .journal-sheet .theme-scifi td {
-        border-bottom: 1px solid var(--s-dim);
+        margin: 15px 0;
     }
 
 /* =========================================
    THEME 6: HORROR / ELDRITCH
    Wrapper Class: <div class="theme-horror">
    ========================================= */
-
 .journal-sheet .theme-horror {
     --h-blood: #8a0303;
-    --h-text: #1a1a1a;
-    --h-paper: #d1cfcd;
+    --h-text: #000;
+    --h-paper: #dcdcdc;
     font-family: 'Amiri', 'Times New Roman', serif;
     background-color: var(--h-paper);
     color: var(--h-text);
-    padding: 20px;
-    background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(0,0,0,0.1) 30px);
+    padding: 30px;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+    filter: contrast(1.1) sepia(0.3);
 }
 
     .journal-sheet .theme-horror h1 {
         font-family: 'Amiri', serif;
-        font-size: 3em;
+        font-size: 3.5em;
         color: var(--h-text);
         text-align: center;
         border-bottom: none;
-        letter-spacing: -1px;
+        letter-spacing: -2px;
+        transform: rotate(1deg); /* Unsettling tilt */
     }
 
     .journal-sheet .theme-horror h2 {
         color: var(--h-blood);
         font-style: italic;
-        border-bottom: 1px solid #000;
-    }
-
-    .journal-sheet .theme-horror strong {
-        color: var(--h-blood);
-    }
-
-    .journal-sheet .theme-horror img {
-        filter: sepia(0.8) contrast(1.2);
-        border: 5px solid #fff;
-        box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-        transform: rotate(-1deg);
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
     }
 
 /* =========================================
-   THEME 7: THASSILON / RUNELORDS
+   THEME 7: THASSILON / RUNELORDS (UPDATED)
    Wrapper Class: <div class="theme-thassilon">
    ========================================= */
-
 .journal-sheet .theme-thassilon {
-    --t-bg: #2b2b2b; /* Charcoal Stone */
-    --t-text: #e0e0e0; /* Light Grey */
-    --t-sin: #b30000; /* Sin Red */
-    --t-rune: #5a5a5a; /* Dark Stone */
+    --t-bg: #eaddcf; /* Aged Parchment */
+    --t-text: #1a1a1a; /* Ink Black */
+    --t-sin: #8b0000; /* Deep Red */
+    --t-border: #2b2b2b; /* Charcoal */
 
     font-family: 'Modesto Condensed', serif;
+    /* Textured Parchment Effect */
     background-color: var(--t-bg);
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #eaddcf, #dccbb6);
     color: var(--t-text);
-    padding: 25px;
-    border: 5px solid var(--t-rune);
-    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    padding: 30px;
+    border: 8px solid var(--t-border);
+    outline: 2px solid var(--t-sin);
+    outline-offset: -12px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     position: relative;
+    overflow: hidden;
 }
 
-    /* Seven-pointed star watermark effect */
+    /* The Sihedron Watermark */
     .journal-sheet .theme-thassilon::before {
-        content: "★";
+        content: "★"; /* Simple Star representing the Sihedron */
         position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 5em;
-        color: rgba(255,255,255,0.05);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(15deg);
+        font-size: 400px;
+        color: rgba(139, 0, 0, 0.05); /* Very faint red watermark */
         z-index: 0;
         pointer-events: none;
+        font-family: sans-serif; /* Ensuring a standard shape */
     }
 
     .journal-sheet .theme-thassilon h1 {
+        position: relative;
         font-family: 'Modesto Condensed', serif;
-        font-size: 3em;
+        font-size: 3.2em;
         color: var(--t-sin);
         text-transform: uppercase;
         text-align: center;
-        border-bottom: 1px solid var(--t-sin);
-        border-top: 1px solid var(--t-sin);
+        border-top: 3px double var(--t-border);
+        border-bottom: 3px double var(--t-border);
         padding: 10px 0;
-        letter-spacing: 5px;
+        letter-spacing: 4px;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
     }
 
     .journal-sheet .theme-thassilon h2 {
-        color: #fff;
-        border-left: 5px solid var(--t-sin);
+        position: relative;
+        color: var(--t-border);
+        border-left: 8px solid var(--t-sin);
         padding-left: 15px;
-        background: linear-gradient(90deg, rgba(179,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+        margin-top: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
-    .journal-sheet .theme-thassilon .read-aloud {
-        border: 1px solid var(--t-rune);
-        background-color: #1f1f1f;
-        padding: 15px;
-        font-style: italic;
-        border-left: 5px solid var(--t-text);
+    .journal-sheet .theme-thassilon p,
+    .journal-sheet .theme-thassilon li {
+        position: relative; /* Brings text above watermark */
+        z-index: 1;
     }
 
 /* =========================================
-   THEME 8: KNIGHTS OF LASTWALL
+   THEME 8: KNIGHTS OF LASTWALL (UPDATED)
    Wrapper Class: <div class="theme-lastwall">
    ========================================= */
-
 .journal-sheet .theme-lastwall {
-    --l-bg: #f8f9fa; /* Pure White/Grey */
+    --l-bg: #f9f7f2; /* Cream White */
     --l-text: #2c3e50; /* Navy Text */
     --l-silver: #bdc3c7; /* Armor Silver */
-    --l-crimson: #c0392b; /* Iomedae Red */
+    --l-blue: #003366; /* Royal Blue */
+    --l-gold: #d4af37; /* Gold Accent */
 
     font-family: 'Signika', sans-serif;
     background-color: var(--l-bg);
     color: var(--l-text);
-    padding: 20px;
-    border: 1px solid var(--l-silver);
-    border-left: 10px solid var(--l-silver);
-    border-right: 10px solid var(--l-silver);
+    padding: 30px;
+    border-top: 15px solid var(--l-blue);
+    border-bottom: 15px solid var(--l-blue);
+    border-left: 2px solid var(--l-gold);
+    border-right: 2px solid var(--l-gold);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
     .journal-sheet .theme-lastwall h1 {
         font-family: 'Modesto Condensed', serif;
-        color: var(--l-text);
+        color: var(--l-blue);
         text-align: center;
-        border-bottom: 3px solid var(--l-crimson);
+        border-bottom: 3px solid var(--l-gold);
         text-transform: uppercase;
         letter-spacing: 2px;
+        padding-bottom: 10px;
     }
 
     .journal-sheet .theme-lastwall h2 {
-        color: var(--l-crimson);
-        border-bottom: 1px solid var(--l-silver);
+        color: var(--l-gold);
+        background-color: var(--l-blue);
+        padding: 5px 15px;
         margin-top: 25px;
         font-variant: small-caps;
+        border-radius: 4px;
+        box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+        text-shadow: 1px 1px 0 #000;
     }
 
+    /* Shield-style Blockquote */
     .journal-sheet .theme-lastwall blockquote {
-        background-color: #fff;
-        border: 1px solid var(--l-silver);
-        border-left: 5px solid var(--l-crimson);
-        padding: 10px 20px;
-        color: #555;
+        background: linear-gradient(135deg, #e8e8e8 0%, #ffffff 100%);
+        border: 2px solid var(--l-silver);
+        border-left: 8px solid var(--l-blue);
+        border-radius: 0 15px 15px 0;
+        padding: 15px 20px;
+        color: #444;
+        font-style: italic;
+        margin: 20px 0;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
     }
 
 /* =========================================
-   THEME 9: ELVEN / KYONIN
+   THEME 9: ELVEN / KYONIN (UPDATED)
    Wrapper Class: <div class="theme-elven">
    ========================================= */
-
 .journal-sheet .theme-elven {
-    --e-bg: #f0f7f4; /* Mint White */
-    --e-text: #081c15; /* Deep Forest */
-    --e-accent: #52b788; /* Light Green */
-    --e-highlight: #d8f3dc; /* Pale Green */
+    --e-bg: #f4f8f4; /* Mist Green */
+    --e-text: #1b2e1b; /* Deep Forest */
+    --e-green: #3a5a40; /* Fern Green */
+    --e-brown: #8b5a2b; /* Bark Brown */
 
     font-family: 'Amiri', serif;
     background-color: var(--e-bg);
+    /* Soft vignette gradient */
+    background-image: radial-gradient(circle at center, #ffffff 40%, #e8f5e9 100%);
     color: var(--e-text);
-    padding: 30px;
-    border: 1px solid var(--e-accent);
-    border-radius: 30px 0 30px 0;
-    box-shadow: 5px 5px 0px var(--e-highlight);
+    padding: 35px;
+    border: 3px double var(--e-green);
+    border-radius: 30px; /* Organic shape */
+    box-shadow: 0 5px 15px rgba(58, 90, 64, 0.2);
 }
 
     .journal-sheet .theme-elven h1 {
         font-family: 'Amiri', serif;
-        font-weight: 400;
+        font-weight: 700;
         font-style: italic;
-        color: var(--e-text);
+        color: var(--e-green);
         text-align: center;
-        border-bottom: 1px solid var(--e-accent);
+        border-bottom: 1px solid var(--e-brown);
+        margin-bottom: 25px;
     }
+
+        /* Celtic/Nature stylized header decoration */
+        .journal-sheet .theme-elven h1::after {
+            content: " ~ ❦ ~ ";
+            display: block;
+            font-size: 0.6em;
+            color: var(--e-brown);
+            margin-top: 5px;
+        }
 
     .journal-sheet .theme-elven h2 {
-        color: var(--e-accent);
-        text-transform: lowercase;
+        color: var(--e-brown);
         font-variant: small-caps;
-        font-size: 1.8em;
+        font-size: 1.6em;
         border-bottom: none;
-    }
-
-    .journal-sheet .theme-elven p::first-letter {
-        color: var(--e-accent);
-        font-size: 1.5em;
-        font-weight: bold;
+        padding-left: 10px;
+        border-left: 3px solid var(--e-green);
     }
 
 /* =========================================
-   THEME 10: ABSALOM / CITY OF GOLD
+   THEME 10: ABSALOM / CITY OF GOLD (UPDATED)
    Wrapper Class: <div class="theme-absalom">
    ========================================= */
-
 .journal-sheet .theme-absalom {
-    --ab-bg: #fffbf0; /* Cream */
-    --ab-text: #1a1a1a; /* Black */
-    --ab-gold: #d4af37; /* Metallic Gold */
-    --ab-blue: #003366; /* Taldan Blue */
+    --ab-bg: #fffbf0; /* Ledger Paper */
+    --ab-text: #2b2b2b; /* Ink */
+    --ab-bronze: #cd7f32; /* Bronze */
+    --ab-brown: #5d4037; /* Leather */
 
-    font-family: 'Signika', 'Georgia', serif;
+    font-family: 'Georgia', serif;
     background-color: var(--ab-bg);
+    /* Ledger Lines */
+    background-image: repeating-linear-gradient(#fffbf0 0px, #fffbf0 24px, #e0e0e0 25px);
     color: var(--ab-text);
-    padding: 20px;
-    border: 4px double var(--ab-gold);
-    outline: 1px solid var(--ab-blue);
-    outline-offset: 5px;
+    padding: 20px 30px;
+    border: 1px solid var(--ab-brown);
+    /* Stacked paper effect */
+    box-shadow: 3px 3px 0 #fff, 4px 4px 0 var(--ab-brown), 7px 7px 0 #fff, 8px 8px 0 var(--ab-brown);
     margin: 10px;
+    line-height: 25px; /* Matches ledger lines */
 }
 
     .journal-sheet .theme-absalom h1 {
         font-family: 'Modesto Condensed', serif;
-        color: var(--ab-blue);
+        color: var(--ab-brown);
         text-align: center;
-        border-top: 2px solid var(--ab-gold);
-        border-bottom: 2px solid var(--ab-gold);
+        border: 3px solid var(--ab-bronze);
+        background-color: #fff;
         padding: 10px;
-        letter-spacing: 1px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
     }
 
     .journal-sheet .theme-absalom h2 {
-        color: var(--ab-gold);
-        text-shadow: 1px 1px 0px #000;
-        background-color: var(--ab-blue);
-        padding: 5px 10px;
-        border-radius: 2px;
-    }
-
-    .journal-sheet .theme-absalom table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    .journal-sheet .theme-absalom th {
-        background-color: var(--ab-gold);
         color: #fff;
-        border: 1px solid #b3932d;
-    }
-
-    .journal-sheet .theme-absalom td {
-        border: 1px solid var(--ab-gold);
+        background-color: var(--ab-brown);
+        padding: 5px 15px;
+        display: inline-block; /* Looks like a label */
+        transform: skew(-10deg);
+        margin-top: 20px;
+        font-size: 1.2em;
+        box-shadow: 2px 2px 0 var(--ab-bronze);
     }

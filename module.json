@@ -2,7 +2,7 @@
   "id": "custom-journal-styles",
   "title": "My Custom Journal Styles",
   "description": "A collection of scoped CSS themes for Foundry VTT Journals.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "compatibility": {
     "minimum": "13",
     "verified": "13.348"
