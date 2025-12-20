@@ -292,7 +292,6 @@
         box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
         transform: rotate(-1deg);
     }
-
 /* =========================================
    THEME 7: THASSILON / RUNELORDS (UPDATED)
    Wrapper Class: <div class="theme-thassilon">
@@ -304,14 +303,13 @@
     --t-border: #2b2b2b; /* Charcoal */
 
     font-family: 'Modesto Condensed', serif;
-    /* Textured Parchment Effect */
     background-color: var(--t-bg);
     background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #eaddcf, #dccbb6);
     color: var(--t-text);
     padding: 30px;
-    border: 8px solid var(--t-border);
-    outline: 2px solid var(--t-sin);
-    outline-offset: -12px;
+    /* COMPLEX BORDER: Striped Runic Hazard Feel */
+    border: 15px solid transparent;
+    border-image: repeating-linear-gradient( 45deg, var(--t-sin), var(--t-sin) 15px, var(--t-border) 15px, var(--t-border) 30px ) 20;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     position: relative;
     overflow: hidden;
@@ -328,7 +326,7 @@
         color: rgba(139, 0, 0, 0.05); /* Very faint red watermark */
         z-index: 0;
         pointer-events: none;
-        font-family: sans-serif; /* Ensuring a standard shape */
+        font-family: sans-serif;
     }
 
     .journal-sheet .theme-thassilon h1 {
@@ -357,7 +355,7 @@
 
     .journal-sheet .theme-thassilon p,
     .journal-sheet .theme-thassilon li {
-        position: relative; /* Brings text above watermark */
+        position: relative;
         z-index: 1;
     }
 
@@ -376,11 +374,13 @@
     background-color: var(--l-bg);
     color: var(--l-text);
     padding: 30px;
-    border-top: 15px solid var(--l-blue);
-    border-bottom: 15px solid var(--l-blue);
-    border-left: 2px solid var(--l-gold);
-    border-right: 2px solid var(--l-gold);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    /* BORDER: Triple Layer Shield Frame (Gold/Blue/Gold) */
+    border: 8px solid var(--l-gold);
+    box-shadow: 0 0 0 4px var(--l-blue), /* Middle Blue Band */
+    0 0 0 8px var(--l-gold), /* Outer Gold Band */
+    0 0 20px rgba(0,0,0,0.2); /* Drop Shadow */
+
+    margin: 10px; /* Space for the box-shadow expansion */
 }
 
     .journal-sheet .theme-lastwall h1 {
@@ -404,7 +404,6 @@
         text-shadow: 1px 1px 0 #000;
     }
 
-    /* Shield-style Blockquote */
     .journal-sheet .theme-lastwall blockquote {
         background: linear-gradient(135deg, #e8e8e8 0%, #ffffff 100%);
         border: 2px solid var(--l-silver);
@@ -429,13 +428,17 @@
 
     font-family: 'Amiri', serif;
     background-color: var(--e-bg);
-    /* Soft vignette gradient */
     background-image: radial-gradient(circle at center, #ffffff 40%, #e8f5e9 100%);
     color: var(--e-text);
     padding: 35px;
-    border: 3px double var(--e-green);
-    border-radius: 30px; /* Organic shape */
+    /* BORDER: Organic Double Line */
+    border: 6px double var(--e-green);
+    border-radius: 20px;
+    /* BORDER: Outer 'Vine' Dashed Line via Outline */
+    outline: 2px dashed var(--e-brown);
+    outline-offset: 6px;
     box-shadow: 0 5px 15px rgba(58, 90, 64, 0.2);
+    margin: 10px;
 }
 
     .journal-sheet .theme-elven h1 {
@@ -448,7 +451,6 @@
         margin-bottom: 25px;
     }
 
-        /* Celtic/Nature stylized header decoration */
         .journal-sheet .theme-elven h1::after {
             content: " ~ ❦ ~ ";
             display: block;
@@ -478,15 +480,17 @@
 
     font-family: 'Georgia', serif;
     background-color: var(--ab-bg);
-    /* Ledger Lines */
     background-image: repeating-linear-gradient(#fffbf0 0px, #fffbf0 24px, #e0e0e0 25px);
     color: var(--ab-text);
     padding: 20px 30px;
-    border: 1px solid var(--ab-brown);
-    /* Stacked paper effect */
-    box-shadow: 3px 3px 0 #fff, 4px 4px 0 var(--ab-brown), 7px 7px 0 #fff, 8px 8px 0 var(--ab-brown);
+    /* BORDER: Gold Leaf Picture Frame */
+    border: 20px solid transparent;
+    border-image: linear-gradient(to bottom right, #d4af37, #8a6e2f, #d4af37) 1;
+    box-shadow: 0 0 0 1px var(--ab-brown), /* Thin inner line */
+    5px 5px 15px rgba(0,0,0,0.3); /* Drop shadow */
+
     margin: 10px;
-    line-height: 25px; /* Matches ledger lines */
+    line-height: 25px;
 }
 
     .journal-sheet .theme-absalom h1 {
@@ -506,7 +510,7 @@
         color: #fff;
         background-color: var(--ab-brown);
         padding: 5px 15px;
-        display: inline-block; /* Looks like a label */
+        display: inline-block;
         transform: skew(-10deg);
         margin-top: 20px;
         font-size: 1.2em;
